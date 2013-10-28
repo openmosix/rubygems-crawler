@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+# Define an env variable MONGO_URI like:
+# MONGO_URI='mongodb://localhost:27017/'
+
+require 'rubygems-crawler/gems_crawler'
+
+mongo_uri = ENV['MONGO_URI'] || 'mongodb://localhost:27017/'
+mongo_client = Mongo::MongoClient.from_uri(mongo_uri)
+mongo_db = mongo_client.db('rubygems')
+
+g = RubyGems::GemsCrawler.new mongo_db
+g.crawl_from 'a'
