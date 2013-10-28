@@ -9,4 +9,11 @@ Gem::Specification.new do |s|
   s.files = `git ls-files | grep lib`.split("\n")
 
   s.executables = `git ls-files -- bin/*`.split("\n").map{|i| i.gsub(/^bin\//,'')}
+  
+  s.add_dependency 'nokogiri', '>= 1.5.5'  
+  s.add_dependency 'mongo', '~> 1.8.0'
+  s.add_dependency 'bson_ext', '~> 1.8.0'
+  s.add_dependency 'gems', "~> 0.8.3"
+    
+  s.add_development_dependency "rake", ">= 0"
 end
