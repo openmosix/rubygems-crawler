@@ -1,0 +1,29 @@
+PATH
+  remote: .
+  specs:
+    rubygems-crawler (0.0.11)
+      bson_ext (~> 1.8.0)
+      gems (~> 0.8.3)
+      mongo (~> 1.8.0)
+      nokogiri (>= 1.5.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bson (1.8.6)
+    bson_ext (1.8.6)
+      bson (~> 1.8.6)
+    gems (0.8.3)
+    mini_portile (0.5.2)
+    mongo (1.8.6)
+      bson (~> 1.8.6)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
+    rake (10.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  rubygems-crawler!
